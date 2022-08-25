@@ -12,5 +12,19 @@
     "title": "demoQuarto",
     "section": "",
     "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "plot.html",
+    "href": "plot.html",
+    "title": "Plot",
+    "section": "",
+    "text": "library(palmerpenguins)\nlibrary(ggplot2)\nggplot2::theme_set(ggplot2::theme_minimal())"
+  },
+  {
+    "objectID": "plot.html#jouons-avec-les-pingouins",
+    "href": "plot.html#jouons-avec-les-pingouins",
+    "title": "Plot",
+    "section": "Jouons avec les Pingouins !",
+    "text": "Jouons avec les Pingouins !\n\nmass_flipper <- ggplot(data = penguins, \n                       aes(x = flipper_length_mm,\n                           y = body_mass_g)) +\n  geom_point(aes(color = species, \n                 shape = species),\n             size = 3,\n             alpha = 0.8) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(title = \"Penguin size, Palmer Station LTER\",\n       subtitle = \"Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins\",\n       x = \"Flipper length (mm)\",\n       y = \"Body mass (g)\",\n       color = \"Penguin species\",\n       shape = \"Penguin species\") +\n  theme(legend.position = c(0.2, 0.7),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nmass_flipper\n\nWarning: Removed 2 rows containing missing values (geom_point)."
   }
 ]
